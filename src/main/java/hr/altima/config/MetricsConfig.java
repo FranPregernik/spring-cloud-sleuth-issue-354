@@ -12,7 +12,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @EnableMetrics
 public class MetricsConfig extends MetricsConfigurerAdapter {
 
-    @Bean
+    @Bean(name = "mvcMetricsHandlerInterceptor")
     public HandlerInterceptor mvcMetricsHandlerInterceptor() {
         return new MvcMetricsHandlerInterceptor();
     }
